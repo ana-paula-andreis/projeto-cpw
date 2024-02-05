@@ -1,4 +1,4 @@
-# projeto_cpw 2024
+# Disciplina de Construção de Página Web - 2024
 
 Projeto base para a disciplina de CPW. Conteúdos:
 
