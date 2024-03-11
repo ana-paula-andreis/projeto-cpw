@@ -15,15 +15,16 @@
 
         <p>Atributos</p>
 
-        <p style="text-indent: 3ch;">Documentação sobre os atributos.<a href="https://www.w3schools.com/html/html_form_attributes.asp" target="_blank"> aqui.</a></p>
+        <p style="text-indent: 20ch;">Documentação sobre os atributos.<a href="https://www.w3schools.com/html/html_form_attributes.asp" target="_blank"> aqui.</a></p>
 
         <ul>
             <li><b>type:</b>
                 <label>Nome:</label>
                 <input id="idNome" name="idNome" type="text" 
-                     value="Prof. Telmo Júnior" 
+                     value="" 
                       alt="Digite o seu nome" 
-                      size="50" maxlength="20"/>
+                      placeholder="Digite o nome" 
+                      size="10" maxlength="20"/>
 
             </li>
 
@@ -40,7 +41,7 @@
 
             <input id="idCNH" name="nameCNH" 
             type="checkbox" 
-            alt="Possui CNH ?"/>
+            alt="Possui CNH ?" checked/>
 
             <li><b>type:</b> radio:
             
@@ -48,14 +49,29 @@
                     <legend>Exemplo: Select a maintenance drone:</legend>
                     <!--mesmo valor no atributo name para selecao exclusiva-->
                     <div>
-                      <input type="radio" id="huey" name="drone" value="huey"
+                      <input type="radio" id="huey" name="drone" value=""
                              checked>
                       <label for="huey">Huey</label>
                     </div>
                 
                     <div>
-                      <input type="radio" id="dewey" name="drone" value="dewey">
+                      <input type="radio" id="dewey" name="drone" value="">
                       <label for="dewey">Dewey</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="django" name="drone" value="">
+                        <label for="dewey">Django</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="rock" name="drone" value="">
+                        <label for="dewey">Rock</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="pop" name="drone" value="">
+                        <label for="dewey">Pop</label>
                     </div>
                 
                 </fieldset>
@@ -79,6 +95,12 @@
             <li><b>type:</b> button</li>
 
             <li><b>type:</b> range</li>
+
+            <li><b>type:</b> number
+                <input type="number" id="campoNumerico" 
+                       name="campoNumerico" value=""
+                       step="10"/>
+            </li>
                         
         </ul>
 
@@ -97,7 +119,7 @@
         <p style="text-indent: 3ch;">Formulário:</p>
 
         <form id="formindex3" action="index4.html" method="get" 
-                      style="text-indent: 3ch;">
+                      style="text-indent: 0ch;">
             
             <label for="nome">Nome:<label>
             <input id="idnome" type="text" name="nome">

@@ -12,7 +12,7 @@
     </head> 
     <body>
 
-        <form id="formindex5" action="#" method="post">
+        <form id="formindex5" action="#" method="get">
 
             <label for="idNome">Nome:<label>
             <input id="idNome" type="text" name="nome">            
@@ -24,17 +24,29 @@
 
         </form>
 
+
     </body>
 
     <script type="text/javascript">
 
             $('#formindex5').bind('submit', function () {
 
-                var nome = $("input[idNome='nome']",this).val();
-                //alert(nome);
+            //recupera a url  
+            const queryString = window.location.search;
 
-                var sobrenome = $("input[name='idSobrenome']",this).val();
-                alert(nome + "  " +  sobrenome);
+            //recupera os parâmemtros que estão na url
+            const urlParams = new URLSearchParams(queryString);
+
+            alert(urlParams);
+            
+            //acessa os parametros e seta nas caixas de texto.
+            var nome = urlParams.get('nome');
+
+            var sobrenome = urlParams.get('sobrenome');
+
+            alert(nome);
+            alert(sobrenome);
+
 
             });
 
