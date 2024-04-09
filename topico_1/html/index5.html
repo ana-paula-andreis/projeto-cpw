@@ -31,21 +31,21 @@
 
             $('#formindex5').bind('submit', function () {
 
-            //recupera a url  
-            const queryString = window.location.search;
+                //recupera a url  
+                const queryString = window.location.search;
 
-            //recupera os parâmemtros que estão na url
-            const urlParams = new URLSearchParams(queryString);
+                //recupera os parâmemtros que estão na url
+                const urlParams = new URLSearchParams(queryString);
 
-            alert(urlParams);
-            
-            //acessa os parametros e seta nas caixas de texto.
-            var nome = urlParams.get('nome');
+                alert(urlParams);
+                
+                //acessa os parametros e seta nas caixas de texto.
+                var nome = urlParams.get('nome');
 
-            var sobrenome = urlParams.get('sobrenome');
+                var sobrenome = urlParams.get('sobrenome');
 
-            alert(nome);
-            alert(sobrenome);
+                alert(nome);
+                alert(sobrenome);
 
 
             });
