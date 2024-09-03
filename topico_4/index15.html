@@ -90,19 +90,25 @@
           //recupera os parâmemtros que estão na url
           const urlParams = new URLSearchParams(queryString);
             
-          //acessa os parametros e seta nas caixas de texto.
-          document.getElementById("inputNome").value = 
+        //acessa os parametros e seta nas caixas de texto.
+        document.getElementById("inputNome").value = 
                                         urlParams.get('nome');
 
+        if(!isNaN(urlParams.get('valor')) && urlParams.get('valor') != null  ){
           document.getElementById("inputValor").value = 
                             parseFloat(urlParams.get('valor'));
+        }
 
+        if(!isNaN(urlParams.get('quantidade')) && urlParams.get('quantidade') != null  ){
           document.getElementById("inputQuantidade").value = 
                             parseFloat(urlParams.get('quantidade'));        
-           
-          document.getElementById("inputTotal").value = 
+        }
+
+        if(!isNaN(urlParams.get('total')) && urlParams.get('total') != null  ){
+                document.getElementById("inputTotal").value = 
                             parseFloat(urlParams.get('total'));
-          
+        }                  
+                    
         });
         
 

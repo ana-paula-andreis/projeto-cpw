@@ -110,18 +110,17 @@
 
                 var linha = tabela.insertRow(tabela.rows.length);
 
-
                 var celula0 = linha.insertCell(0);
-                celula0.innerHTML = dados[i].codigo;
+                celula0.textContent = dados[i].codigo;
 
                 var celula1 = linha.insertCell(1); 
-                celula1.innerHTML = dados[i].nome;
+                celula1.textContent = dados[i].nome;
 
                 var celula2 = linha.insertCell(2); 
-                celula2.innerHTML = dados[i].datanascimento;
+                celula2.textContent = dados[i].datanascimento;
 
                 var celula3 = linha.insertCell(3);
-                celula3.innerHTML = dados[i].curso;
+                celula3.textContent = dados[i].curso;
 
                 var celula4 = linha.insertCell(4);
                 celula4.innerHTML = "<input type=\"button\" onclick=\"remover("+i+")\" value=\"Remover\">";

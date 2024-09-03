@@ -27,23 +27,32 @@
                     <div class="alinhamento">
                         <label for="nome">Nome da Mercadoria:</label>
                     </div>
-                    <input type="text" name="nome"/>
+                    <input type="text" name="nome" id="inputNome"/>
                 </div>
                 <div class="formcontrol">
                     <div class="alinhamento">
-                        <label for="peso">Valor da Mercadoria:</label>
+                        <label for="valor">Valor da Mercadoria:</label>
                     </div>
                     <input type="number" name="valor" id="inputValor" size="10"/>
                 </div>
 
                 <div class="formcontrol">
                     <div class="alinhamento">
-                        <label for="peso">Quantidade da Mercadoria:</label>
+                        <label for="quantidade">Quantidade da Mercadoria:</label>
                     </div>
                     <input type="number" name="quantidade" id="inputQuantidade" size="10"/>
                 </div>
+
+                <div class="formcontrol">
+                    <div class="alinhamento">
+                        <label for="valor">Valor total:</label>
+                    </div>
+                    <input type="number" name="valor" id="inputTotal" size="5" value="0" readonly disabled/>
+                </div>
                 
                 <input type="button" value="Calcular" id="btnCalcular">
+
+                <input type="button" value="Reset" id="btnReset">
 
         </div>
       
@@ -63,15 +72,18 @@
             if(valor > 0 && quantidade > 0){
 
                 //documentacao sobre o metodo alert: https://www.w3schools.com/jsref/met_win_alert.asp
-                alert(valor * quantidade);
-
+                document.getElementById("inputTotal").value = (valor * quantidade);
             }else{
 
                 alert('Informe valores positivos para o valor e quantidade !');
-
             }
+        });
 
-         
+        $("#btnReset").click(function(){
+            document.getElementById("inputNome").value = "";
+            document.getElementById("inputQuantidade").value = "";
+            document.getElementById("inputValor").value = "";
+            document.getElementById("inputTotal").value = 0;
         });
 
     </script>

@@ -45,7 +45,7 @@
                     <div class="alinhamento">
                         <label for="peso">Valor da Mercadoria:</label>
                     </div>
-                    <input type="number" name="valor" id="inputValor" size="10" step="0.1"/>
+                    <input type="number" name="valor" id="inputValor" size="10" step="0.1" value="0"/>
                 </div>
 
                 <div class="formcontrol">
@@ -78,54 +78,7 @@
     </body>
     <script type="text/javascript">
 
-        //jquery: para executar uma function após a submissão do formulário pelo botão:
-        $('#formCalculaItem').bind('submit', function () {
-
-            //documentação sobre o método getElementById: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
-            var valor = document.getElementById("inputValor").value;
-
-            var quantidade = document.getElementById("inputQuantidade").value;
-
-
-            //documentacao sobre o metodo alert: https://www.w3schools.com/jsref/met_win_alert.asp
-            //alert(valor * quantidade);
-
-            if(valor > 0 && quantidade > 0){
-
-                document.getElementById("inputTotal").value = valor * quantidade;
-
-            }else{
-
-                alert("Dados inválidos para valor e/ou quantidade !!!");
-            }
-
-            
-        });
-
-        
-        $(document).ready(function() {
-
-          //recupera a url  
-          const queryString = window.location.search;
-
-          //recupera os parâmemtros que estão na url
-          const urlParams = new URLSearchParams(queryString);
-            
-          //acessa os parametros e seta nas caixas de texto.
-          document.getElementById("inputNome").value = 
-                                        urlParams.get('nome');
-
-          document.getElementById("inputValor").value = 
-                            parseFloat(urlParams.get('valor'));
-
-          document.getElementById("inputQuantidade").value = 
-                            parseFloat(urlParams.get('quantidade'));        
-           
-          document.getElementById("inputTotal").value = 
-                            parseFloat(urlParams.get('total'));
-          
-        });
-        
+     
 
     </script>
 

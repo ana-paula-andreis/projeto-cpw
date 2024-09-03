@@ -6,32 +6,7 @@
          var operando1 = prompt("Informe o primeiro operando:");
          var operando2 = prompt("Informe o segundo operando :");
 
-         operacao = parseInt(operacao);
-         operando1 = parseFloat(operando1);
-         operando2 = parseFloat(operando2);
 
-         if(!isNaN(operacao) && operacao > 0 && operacao < 5){
-
-            if(!isNaN(operando1) && !isNaN(operando2)){
-
-                if(operacao == 1){
-                    resultado = operando1 + operando2;
-                }else if(operacao == 2){
-                    resultado = operando1 - operando2;
-                }else if(operacao == 3){
-                    resultado = operando1 * operando2;
-                }else if(operacao == 4){
-                    resultado = operando1 / operando2;
-                }else{
-                    alert("Operandos inválidos !!!");
-                }
-            }else{
-                alert("Operandos inválidos !!!");
-            }
-         }else{
-
-            alert("Operando inválido !!! fim do programa.");
-         }
          /* Exercício sobre estrutura de seleção if/else.
 
             1) Receber uma valor inteiro para indicar a operação artimética:

@@ -10,36 +10,7 @@
          operando1 = parseFloat(operando1);
          operando2 = parseFloat(operando2);
 
-         if(!isNaN(operacao) && operacao > 0 && operacao < 5){
 
-            if(!isNaN(operando1) && !isNaN(operando2)){
-
-                switch(operacao){
-
-                    case 1:
-                        resultado = operando1 + operando2;
-                        break;
-                    case 2:
-                        resultado = operando1 - operando2;  
-                        break;
-                    case 3:
-                        resultado = operando1 * operando2;  
-                        break; 
-                    case 4:
-                        resultado = operando1 / operando2;
-                        break;
-                    default:
-                        alert("Operação inválida !!!");
-                }
-               
-            }else{
-                alert("Operandos inválidos !!!");
-            }
-
-         }else{
-
-            alert("Operando inválido !!! fim do programa.");
-         }
          /* Exercício sobre estrutura de seleção switch.
 
             1) Receber uma valor inteiro para indicar a operação artimética:

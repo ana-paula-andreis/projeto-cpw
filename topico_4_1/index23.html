@@ -129,20 +129,20 @@
                 var linha = tabela.insertRow(tabela.rows.length);
 
                 var celula0 = linha.insertCell(0);
-                celula0.innerHTML = document.getElementById("inputCodigo").value;
+                celula0.textContent = document.getElementById("inputCodigo").value;
 
                 var celula1 = linha.insertCell(1);
                 //metodo trim(0 : remove os espaços em branco antes e/ou depois.) 
-                celula1.innerHTML = document.getElementById("inputNome").value.trim();
+                celula1.textContent = document.getElementById("inputNome").value.trim();
 
                 var celula2 = linha.insertCell(2); 
-                celula2.innerHTML = document.getElementById("selectCurso").value;
+                celula2.textContent = document.getElementById("selectCurso").value;
 
                 var celula3 = linha.insertCell(3);
-                celula3.innerHTML = document.getElementById("inputDTNasc").value;
+                celula3.textContent = document.getElementById("inputDTNasc").value;
 
                 var celula4 = linha.insertCell(4);
-                celula4.innerHTML = document.getElementById("inputCEP").value.trim();
+                celula4.textContent = document.getElementById("inputCEP").value.trim();
 
                 document.getElementById("inputCodigo").value = "";
                 document.getElementById("inputNome").value = "";

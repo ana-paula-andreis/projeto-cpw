@@ -135,14 +135,7 @@
 
         $("#btnSubtracao").click(function(){
 
-            //documentação sobre o método getElementById: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
-            var texto = document.getElementById("inputTexto").value;
-
-            //concatena o caracter + na variavel
-            texto = texto + "-";
-
-            //atualiza o input
-            document.getElementById("inputTexto").value = texto;
+       
 
         });
 
@@ -154,9 +147,15 @@
             //se a variavel texto contiver o caracter + o método indexOf irá retornar o indice desse caracter
             //documentacao sobre o metodo indexOF : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
             
-            var posicao = texto.indexOf("+"); 
+            var posicao_mais = texto.indexOf("+"); 
+
+            var posicao_menos = texto.indexOf("-");
             
-            if(posicao > -1){
+            var posicao_div = texto.indexOf("/");
+            
+            var posicao_multi = texto.indexOf("*");
+            
+            if(posicao_mais > -1){
 
                 //documentacao sobre o método substring: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring
                 //substring: retorna uma nova string a partir de um ponto inicial e final.
@@ -173,8 +172,12 @@
                     document.getElementById("inputTexto").value = p1 + p2;                
                 }
                 
-            }else {
+            }else if (posicao_menos > -1) {
+            
+            }else{
+
                 alert("Operação inválida!");
+
             }
 
         });

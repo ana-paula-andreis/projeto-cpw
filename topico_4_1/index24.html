@@ -65,6 +65,13 @@
 
             <div class="formcontrol">
                 <div class="alinhamento">
+                    <label for="inputDTCad">Data de Cadastro:</label>
+                </div>
+                <input type="text"  id="inputDTCad" disabled>
+            </div>
+
+            <div class="formcontrol">
+                <div class="alinhamento">
                     <label for="selectCurso">Curso:</label>
                 </div>
                 <select id="selectCurso" name="curso">
@@ -85,6 +92,16 @@
     <script type="text/javascript">
 
         var dados = [];
+        $(document).ready(function(){
+            
+            var data_atual = new Date();
+            data_formatada = data_atual.getUTCDate()+"/"
+                        +(data_atual.getUTCMonth()+1)+"/"
+                        +data_atual.getFullYear();
+            document.getElementById("inputDTCad").value = data_formatada;
+            
+        
+        })
 
         //Jquery permite para executar uma function após o click em um botão:
         $("#btnCadastrar").click(function(){
@@ -150,17 +167,12 @@
 
         });
 
-        function limpaTabela(){
-            
+        function limpaTabela(){            
             var tabela = document.getElementById("tabelaAlunos");
-            var qtd_rows = tabela.rows.length;
-            
+            var qtd_rows = tabela.rows.length;            
             for(var i=1; i < qtd_rows; i++){
-            
-                tabela.deleteRow(i);
-            
+                tabela.deleteRow(i);            
             }
-            
         }
 
         function populaTabela(){
@@ -172,16 +184,16 @@
                 var linha = tabela.insertRow(tabela.rows.length);
 
                 var celula0 = linha.insertCell(0);
-                celula0.innerHTML = dados[i].codigo;
+                celula0.textContent = dados[i].codigo;
 
                 var celula1 = linha.insertCell(1); 
-                celula1.innerHTML = dados[i].nome;
+                celula1.textContent = dados[i].nome;
 
                 var celula3 = linha.insertCell(2);
-                celula3.innerHTML = dados[i].curso;
+                celula3.textContent = dados[i].curso;
 
                 var celula2 = linha.insertCell(3); 
-                celula2.innerHTML = dados[i].datanascimento;
+                celula2.textContent = dados[i].datanascimento;
 
             }            
         }

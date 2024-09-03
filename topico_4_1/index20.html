@@ -26,7 +26,11 @@
     <body>
         <div class="centro">          
             <label for="inputResultado">Resultado:</label>
-            <input type="text" id="inputResultado" value="">            
+            <input type="text" id="inputResultado" value=""> 
+            
+            <label for="inputMedia">Média:</label>
+            <input type="text" id="inputMedia" value="" disabled>
+
         </div>
 
     </body>
@@ -52,6 +56,13 @@
 
             var input = document.getElementById("inputResultado");
             input.value = soma;
+
+            var inputM = document.getElementById("inputMedia");
+            inputM.value = (soma / 3.0).toFixed(2);
+
+
+            //criar mais uma caixa de texto e rótulo (desabilitada)
+            //armazenar o valor médio. apenas duas casas decimais.
 
 
         });

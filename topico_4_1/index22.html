@@ -31,8 +31,10 @@
                     <th scope="col">Código</th>
                     <th scope="col">Nome</th>        
                     <th scope="col">Logradouro</th>
-                    <th scope="col">Número</th>
-                    <th scope="col">Telefone</th>                 
+                    <th scope="col">Número</th>                    
+                    <th scope="col">CEP</th>
+                    <th scope="col">Telefone</th>
+                               
                 </tr> 
                 <tbody id="corpoTabela">     
                     
@@ -59,16 +61,16 @@
             //informações.
             //JSON
             var dados = [ {codigo: 1, nome: "Telmo", 
-                                  endereco: {logradouro: "rua abc", numero: 123}, 
+                                    endereco: {logradouro: "rua abc", numero: 123, cep: "99"}, 
                                        tel: "(54) 3045 4855"},
                           {codigo: 2, nome: "Fernanda",                                   
-                                    endereco: {logradouro: "rua abc", numero: 12}, 
+                                    endereco: {logradouro: "rua abc", numero: 12, cep: "98"}, 
                                     tel: "(54) 99185 2577"},
                           {codigo: 3, nome: "Fulano", 
-                                    endereco: {logradouro: "rua das camélias", numero: 29},  
+                                    endereco: {logradouro: "rua das camélias", numero: 29, cep: "97"},  
                                     tel: "(11) 2022 0011"},
                           {codigo: 4, nome: "Ciglano", 
-                                    endereco: {logradouro: "rua das andradas", numero: 22},  
+                                    endereco: {logradouro: "rua das andradas", numero: 22, cep: "96"},  
                                     tel: "(54) 3313 5433"}
                         ];
             // atividade 2:
@@ -81,20 +83,22 @@
 
                 var linha = tabela.insertRow(tabela.rows.length);
                 var celula0 = linha.insertCell(0);
-                celula0.innerHTML = dados[i].codigo;
+                celula0.textContent = dados[i].codigo;
                 
                 var celula1 = linha.insertCell(1); 
-                celula1.innerHTML = dados[i].nome;
+                celula1.textContent = dados[i].nome;
                 
                 var celula2 = linha.insertCell(2); 
-                celula2.innerHTML = dados[i].endereco.logradouro;
+                celula2.textContent = dados[i].endereco.logradouro;
 
                 var celula3 = linha.insertCell(3); 
-                celula3.innerHTML = dados[i].endereco.numero;
-                
+                celula3.textContent = dados[i].endereco.numero;
+
                 var celula4 = linha.insertCell(4); 
-                celula4.innerHTML = dados[i].tel;
+                celula4.textContent = dados[i].endereco.cep;
                 
+                var celula5 = linha.insertCell(5); 
+                celula5.textContent = dados[i].tel;                
             } 
                                
         });
